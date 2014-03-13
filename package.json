@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-less",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A LESS plugin for Metalsmith",
   "main": "./lib/",
   "scripts": {
