@@ -1,5 +1,7 @@
 # metalsmith-less
 
+A [LESS][0] plugin for [Metalsmith][3].
+
 ## Installation
 
 ```
@@ -8,14 +10,12 @@ npm install metalsmith-less
 
 ## Usage
 
-### JavaScript
-
 ```js
 var less = require('metalsmith-less')
 
 Metalsmith(__dirname)
-    .use(less(options))
-    .build()
+  .use(less(options))
+  .build()
 ```
 
 ### Options
@@ -42,5 +42,7 @@ An object that gets passed along to [`tree.toCSS(options)`][2].
 
 MIT License, see [LICENSE](https://github.com/christophercliff/metalsmith-less/blob/master/LICENSE.md) for details.
 
+[0]: http://lesscss.org/
 [1]: http://lesscss.org/features/#features-overview-feature-importing
 [2]: https://github.com/less/less.js/
+[3]: http://www.metalsmith.io/
