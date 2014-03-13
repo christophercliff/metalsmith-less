@@ -1,8 +1,8 @@
 # metalsmith-less
 
-A [LESS][less] plugin for [Metalsmith][metalsmith].
+[![Build Status](https://travis-ci.org/christophercliff/metalsmith-less.png?branch=master)](https://travis-ci.org/christophercliff/metalsmith-less)
 
-[![Build Status](https://secure.travis-ci.org/christophercliff/metalsmith-less.png?branch=master)](https://travis-ci.org/christophercliff/metalsmith-less)
+A [LESS][less] plugin for [Metalsmith][metalsmith].
 
 ## Installation
 
