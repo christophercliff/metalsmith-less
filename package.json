@@ -1,0 +1,29 @@
+{
+  "name": "metalsmith-less",
+  "version": "0.0.0",
+  "description": "A LESS plugin for Metalsmith",
+  "main": "./lib/",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "keywords": [
+    "metalsmith",
+    "less",
+    "css"
+  ],
+  "author": "Christopher Cliff <ctcliff@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/christophercliff/metalsmith-less"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.2.10",
+    "less": "^1.7.0"
+  },
+  "devDependencies": {
+    "assert-dir-equal": "^1.0.1",
+    "metalsmith": "^0.3.0",
+    "mocha": "^1.17.1"
+  }
+}
