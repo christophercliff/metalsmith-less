@@ -14,4 +14,19 @@ describe('metalsmith-less', function(){
         })
     })
 
+    it('should convert imported files', function(done){
+        Metalsmith('test/fixtures/import')
+            .use(less({
+                pattern: 'less/index.less',
+                parse: {
+                    paths: ['test/fixtures/import/src/less']
+                }
+            }))
+            .build(function(err){
+                if (err) return done(err)
+                assertDir('test/fixtures/import/expected', 'test/fixtures/import/build')
+                return done(null)
+        })
+    })
+
 })

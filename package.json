@@ -4,7 +4,7 @@
   "description": "A LESS plugin for Metalsmith",
   "main": "./lib/",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/jshint ./lib/ ./test/ && ./node_modules/.bin/mocha --reporter spec"
   },
   "keywords": [
     "metalsmith",
@@ -19,11 +19,29 @@
   "license": "MIT",
   "dependencies": {
     "async": "^0.2.10",
-    "less": "^1.7.0"
+    "less": "^1.7.0",
+    "multimatch": "^0.1.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "metalsmith": "^0.3.0",
+    "jshint": "^2.4.4",
+    "metalsmith": "^0.5.0",
     "mocha": "^1.17.1"
+  },
+  "jshintConfig": {
+    "eqeqeq": true,
+    "immed": true,
+    "latedef": "nofunc",
+    "quotmark": "single",
+    "trailing": true,
+    "unused": true,
+    "asi": true,
+    "boss": true,
+    "expr": true,
+    "laxbreak": true,
+    "laxcomma": true,
+    "scripturl": true,
+    "sub": true,
+    "loopfunc": true
   }
 }

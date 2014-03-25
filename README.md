@@ -22,23 +22,17 @@ Metalsmith(__dirname)
 
 ### Options
 
-Use any or all of the following:
+- **`match`** `String pattern|Array<String> pattern`
 
-#### `filter`
+    A [pattern][multimatch] to filter source files. Default `**/*.less`.
 
-A function to filter source files. By [default][default filter], includes all `.less` files. Use this to filter out [`@import`][less @import] files.
+- **`parse`** `Object parseOptions`
 
-#### `mapPath`
+    An object that gets passed along to [`new less.Parser(parseOptions)`][less config]. Default `null`.
 
-A function that maps source paths to build paths. By [default][default mapPath], maps `less/your-file.less` to `css/your-file.css`.
+- **`render`** `Object renderOptions`
 
-#### `parse`
-
-An object that gets passed along to [`new less.Parser(options)`][less source].
-
-#### `render`
-
-An object that gets passed along to [`tree.toCSS(options)`][less source].
+    An object that gets passed along to [`tree.toCSS(renderOptions)`][less config]. Default `null`.
 
 ## Tests
 
@@ -51,8 +45,6 @@ $ npm test
 MIT License, see [LICENSE](https://github.com/christophercliff/metalsmith-less/blob/master/LICENSE.md) for details.
 
 [less]: http://lesscss.org/
-[less @import]: http://lesscss.org/features/#features-overview-feature-importing
-[less source]: https://github.com/less/less.js/
+[less config]: http://lesscss.org/#using-less-configuration
 [metalsmith]: http://www.metalsmith.io/
-[default filter]: https://github.com/christophercliff/metalsmith-less/blob/master/lib/index.js#L38-L40
-[default mapPath]: https://github.com/christophercliff/metalsmith-less/blob/master/lib/index.js#L42-L44
+[multimatch]: https://github.com/sindresorhus/multimatch
