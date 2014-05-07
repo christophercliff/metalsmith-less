@@ -1,3 +1,4 @@
+var assert = require('assert')
 var assertDir = require('assert-dir-equal')
 var less = require('../')
 var Metalsmith = require('metalsmith')
@@ -29,4 +30,14 @@ describe('metalsmith-less', function(){
         })
     })
 
+    it('should not mangle paths with `less` in them', function(done) {
+        Metalsmith('test/fixtures/less-paths')
+            .use(less())
+            .build(function(err, files) {
+                if (err) return done(err)
+                assert(files['dauntless/styles.css'], 'folder with less in its name kept its name')
+                assert(files['stuff/less/styles.css'], 'folder named less kept its name')
+                return done()
+            })
+    })
 })
