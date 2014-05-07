@@ -19,6 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^0.2.10",
+    "debug": "^0.8.1",
     "less": "^1.7.0",
     "multimatch": "^0.1.0"
   },

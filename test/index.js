@@ -19,9 +19,7 @@ describe('metalsmith-less', function(){
         Metalsmith('test/fixtures/import')
             .use(less({
                 pattern: 'less/index.less',
-                parse: {
-                    paths: ['test/fixtures/import/src/less']
-                }
+                includePaths: ['less']
             }))
             .build(function(err){
                 if (err) return done(err)
