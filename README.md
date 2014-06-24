@@ -22,7 +22,7 @@ Metalsmith(__dirname)
 
 ### Options
 
-- **`match`** `String pattern|Array<String> pattern`
+- **`pattern`** `String pattern|Array<String> pattern`
 
     A [pattern][multimatch] to filter source files. Default `**/*.less`.
 
