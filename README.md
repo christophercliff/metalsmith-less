@@ -26,6 +26,10 @@ Metalsmith(__dirname)
 
     A [pattern][multimatch] to filter source files. Default `**/*.less`.
 
+- **`includePaths`** `String path|Array<String> paths`
+
+    Paths that will be searched for include files by the LESS parser.
+
 - **`parse`** `Object parseOptions`
 
     An object that gets passed along to [`new less.Parser(parseOptions)`][less config]. Default `null`.
