@@ -5,7 +5,7 @@ var Metalsmith = require('metalsmith')
 describe('metalsmith-less', function(){
 
     it('should convert less to css', function(done){
-        Metalsmith('test/fixtures/basic')
+        (new Metalsmith('test/fixtures/basic'))
             .use(less())
             .build(function(err){
                 if (err) return done(err)
@@ -15,7 +15,7 @@ describe('metalsmith-less', function(){
     })
 
     it('should convert imported files', function(done){
-        Metalsmith('test/fixtures/import')
+        (new Metalsmith('test/fixtures/import'))
             .use(less({
                 pattern: 'less/index.less',
                 parse: {
@@ -25,6 +25,22 @@ describe('metalsmith-less', function(){
             .build(function(err){
                 if (err) return done(err)
                 assertDir('test/fixtures/import/expected', 'test/fixtures/import/build')
+                return done(null)
+        })
+    })
+
+    it('should create source map', function(done){
+        (new Metalsmith('test/fixtures/source-map'))
+            .use(less({
+                pattern: 'less/index.less',
+                useDefaultSourceMap: true,
+                parse: {
+                    paths: ['test/fixtures/source-map/src/less']
+                }
+            }))
+            .build(function(err){
+                if (err) return done(err)
+                assertDir('test/fixtures/source-map/expected', 'test/fixtures/source-map/build')
                 return done(null)
         })
     })

@@ -1,0 +1,1 @@
+{"version":3,"sources":["test/fixtures/source-map/src/less/a.less","src/less/index.less"],"names":[],"mappings":"AAAA;EACI,UAAA;;ACDJ;EACI,YAAA","sourcesContent":[".a {\n    color: red;\n}\n",".b {\n    color: black;\n}\n"]}
