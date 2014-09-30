@@ -34,6 +34,10 @@ Metalsmith(__dirname)
 
     An object that gets passed along to [`tree.toCSS(renderOptions)`][less config]. Default `null`.
 
+- **`useDefaultSourceMap`** `Boolean useDefaultSourceMap`
+
+    A switch to enable the default source map configuration. LESS's source map API doesn't play nice with Metalsmith, so this is a heavy-handed approach to sensible source maps. Default `false`.
+
 ## Tests
 
 ```

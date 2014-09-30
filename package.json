@@ -4,7 +4,8 @@
   "description": "A LESS plugin for Metalsmith",
   "main": "./lib/",
   "scripts": {
-    "test": "./node_modules/.bin/jshint ./lib/ ./test/ && ./node_modules/.bin/mocha --reporter spec"
+    "jshint": "./node_modules/.bin/jshint ./lib/ ./test/",
+    "test": "npm run jshint && ./node_modules/.bin/mocha --reporter spec --grep ''"
   },
   "keywords": [
     "metalsmith",
@@ -18,30 +19,38 @@
   },
   "license": "MIT",
   "dependencies": {
-    "async": "^0.2.10",
-    "less": "^1.7.0",
-    "multimatch": "^0.1.0"
+    "async": "^0.9.0",
+    "less": "^1.7.5",
+    "lodash": "^2.4.1",
+    "multimatch": "^0.3.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "jshint": "^2.4.4",
-    "metalsmith": "^0.5.0",
-    "mocha": "^1.17.1"
+    "jshint": "^2.5.5",
+    "metalsmith": "^0.11.0",
+    "mocha": "^1.21.4"
   },
   "jshintConfig": {
-    "eqeqeq": true,
-    "immed": true,
-    "latedef": "nofunc",
-    "quotmark": "single",
-    "trailing": true,
-    "unused": true,
     "asi": true,
     "boss": true,
+    "eqeqeq": true,
     "expr": true,
+    "immed": true,
+    "latedef": "nofunc",
     "laxbreak": true,
     "laxcomma": true,
+    "loopfunc": true,
+    "newcap": true,
+    "node": true,
+    "predef": [
+      "describe",
+      "it"
+    ],
+    "quotmark": "single",
     "scripturl": true,
     "sub": true,
-    "loopfunc": true
+    "trailing": true,
+    "undef": true,
+    "unused": true
   }
 }
