@@ -4,8 +4,8 @@
   "description": "A LESS plugin for Metalsmith",
   "main": "./lib/",
   "scripts": {
-    "jshint": "./node_modules/.bin/jshint ./lib/ ./test/",
-    "jscs": "./node_modules/.bin/jscs ./lib/ ./test/",
+    "jshint": "./node_modules/.bin/jshint ./lib/ ./test/ --config ./node_modules/js-style-guide/.jshintrc",
+    "jscs": "./node_modules/.bin/jscs ./lib/ ./test/ --config ./node_modules/js-style-guide/.jscsrc",
     "style": "npm run jshint && npm run jscs",
     "test": "npm run style && ./node_modules/.bin/mocha --reporter spec --grep ''"
   },
@@ -28,88 +28,10 @@
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
+    "js-style-guide": "git+https://github.com/christophercliff/js-style-guide.git#v1.0.0",
     "jscs": "^1.7.3",
     "jshint": "^2.5.5",
     "metalsmith": "^0.11.0",
     "mocha": "^1.21.4"
-  },
-  "jshintConfig": {
-    "asi": true,
-    "boss": true,
-    "eqeqeq": true,
-    "expr": true,
-    "immed": true,
-    "latedef": "nofunc",
-    "laxbreak": true,
-    "laxcomma": true,
-    "loopfunc": true,
-    "newcap": true,
-    "node": true,
-    "predef": [
-      "describe",
-      "it"
-    ],
-    "quotmark": "single",
-    "scripturl": true,
-    "sub": true,
-    "trailing": true,
-    "undef": true,
-    "unused": true
-  },
-    "jscsConfig": {
-    "disallowEmptyBlocks": true,
-    "disallowMixedSpacesAndTabs": true,
-    "disallowMultipleLineBreaks": true,
-    "disallowMultipleLineStrings": true,
-    "disallowMultipleVarDecl": true,
-    "disallowNewlineBeforeBlockStatements": true,
-    "disallowSpaceAfterObjectKeys": true,
-    "disallowSpaceAfterPrefixUnaryOperators": true,
-    "disallowSpaceBeforePostfixUnaryOperators": true,
-    "disallowSpacesInCallExpression": true,
-    "disallowSpacesInFunctionDeclaration": {
-      "beforeOpeningRoundBrace": true
-    },
-    "requireCommaBeforeLineBreak": true,
-    "requireCurlyBraces": [
-      "else",
-      "else if",
-      "for",
-      "while",
-      "do",
-      "try",
-      "catch"
-    ],
-    "requireLineFeedAtFileEnd": true,
-    "requireParenthesesAroundIIFE": true,
-    "requireSpaceAfterBinaryOperators": true,
-    "requireSpaceAfterKeywords": [
-      "do",
-      "for",
-      "if",
-      "else",
-      "switch",
-      "case",
-      "try",
-      "catch",
-      "void",
-      "while",
-      "with",
-      "return",
-      "typeof"
-    ],
-    "requireSpaceBeforeBinaryOperators": true,
-    "requireSpaceBeforeBlockStatements": true,
-    "requireSpaceBeforeObjectValues": true,
-    "requireSpacesInAnonymousFunctionExpression": {
-      "beforeOpeningRoundBrace": true,
-      "beforeOpeningCurlyBrace": true
-    },
-    "requireSpacesInConditionalExpression": true,
-    "requireSpacesInFunctionDeclaration": {
-      "beforeOpeningCurlyBrace": true
-    },
-    "requireSpacesInsideObjectBrackets": "all",
-    "validateParameterSeparator": ", "
   }
 }
