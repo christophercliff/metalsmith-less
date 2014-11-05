@@ -11,7 +11,7 @@ describe('metalsmith-less', function () {
                 if (err) return done(err)
                 assertDir('test/fixtures/basic/expected', 'test/fixtures/basic/build')
                 return done(null)
-        })
+            })
     })
 
     it('should convert imported files', function (done) {
@@ -26,7 +26,7 @@ describe('metalsmith-less', function () {
                 if (err) return done(err)
                 assertDir('test/fixtures/import/expected', 'test/fixtures/import/build')
                 return done(null)
-        })
+            })
     })
 
     it('should create source map', function (done) {
@@ -42,7 +42,8 @@ describe('metalsmith-less', function () {
                 if (err) return done(err)
                 assertDir('test/fixtures/source-map/expected', 'test/fixtures/source-map/build')
                 return done(null)
-        })
+            })
+
     })
 
 })
