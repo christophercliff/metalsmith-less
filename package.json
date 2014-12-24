@@ -4,9 +4,7 @@
   "description": "A LESS plugin for Metalsmith",
   "main": "./lib/",
   "scripts": {
-    "jshint": "./node_modules/.bin/jshint ./lib/ ./test/ --config ./node_modules/js-style-guide/.jshintrc",
-    "jscs": "./node_modules/.bin/jscs ./lib/ ./test/ --config ./node_modules/js-style-guide/.jscsrc",
-    "style": "npm run jshint && npm run jscs",
+    "style": "./node_modules/.bin/crispy ./lib/ ./test/",
     "test": "npm run style && ./node_modules/.bin/mocha --reporter spec --grep ''"
   },
   "keywords": [
@@ -28,9 +26,7 @@
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "js-style-guide": "git+https://github.com/christophercliff/js-style-guide.git#v1.0.0",
-    "jscs": "^1.7.3",
-    "jshint": "^2.5.5",
+    "crispy": "^2.0.0",
     "metalsmith": "^0.11.0",
     "mocha": "^1.21.4"
   }
