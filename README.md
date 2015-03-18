@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/christophercliff/metalsmith-less.png?branch=master)](https://travis-ci.org/christophercliff/metalsmith-less)
 
-A [LESS][less] plugin for [Metalsmith][metalsmith].
+A [LESS](http://lesscss.org/) plugin for [Metalsmith](http://www.metalsmith.io/).
 
 ## Installation
 
@@ -15,28 +15,24 @@ npm install metalsmith-less
 ```js
 var less = require('metalsmith-less')
 
-Metalsmith(__dirname)
-  .use(less(options))
-  .build()
+new Metalsmith(__dirname)
+    .use(less(options))
+    .build()
 ```
 
-### Options
+### **`options`** `Object`
 
-- **`pattern`** `String pattern|Array<String> pattern`
+- **`pattern`** `String|Array<String>`
 
-    A [pattern][multimatch] to filter source files. Default `**/*.less`.
+    The [pattern](https://github.com/sindresorhus/multimatch) to filter source files. Default `**/*.less`.
 
-- **`parse`** `Object parseOptions`
+- **`render`** `Object`
 
-    An object that gets passed along to [`new less.Parser(parseOptions)`][less config]. Default `null`.
+    The options passed to [`less.render(String[, Object])`](http://lesscss.org/usage/#programmatic-usage). Unfortunately, this method is *undocumented*. See https://github.com/less/less-docs/issues/212 for more information. Default `undefined`.
 
-- **`render`** `Object renderOptions`
+- **`useDynamicSourceMap`** `Boolean`
 
-    An object that gets passed along to [`tree.toCSS(renderOptions)`][less config]. Default `null`.
-
-- **`useDefaultSourceMap`** `Boolean useDefaultSourceMap`
-
-    A switch to enable the default source map configuration. LESS's source map API doesn't play nice with Metalsmith, so this is a heavy-handed approach to sensible source maps. Default `false`.
+    Overrides the supplied source map configuration with a dynamic file-level configuration. This is the easiest way to enable source maps in your Metalsmith build. Default `false`.
 
 ## Tests
 
@@ -47,8 +43,3 @@ $ npm test
 ## License
 
 MIT License, see [LICENSE](https://github.com/christophercliff/metalsmith-less/blob/master/LICENSE.md) for details.
-
-[less]: http://lesscss.org/
-[less config]: http://lesscss.org/#using-less-configuration
-[metalsmith]: http://www.metalsmith.io/
-[multimatch]: https://github.com/sindresorhus/multimatch
