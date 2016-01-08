@@ -1,6 +1,10 @@
 # metalsmith-less
 
-[![Build Status](https://travis-ci.org/christophercliff/metalsmith-less.png?branch=master)](https://travis-ci.org/christophercliff/metalsmith-less)
+[![npm version][npm-badge]][npm-url]
+[![Build Status][travis-badge]][travis-url]
+[![Dependency Status][david-badge]][david-url]
+[![Slack chat][slack-badge]][slack-url]
+
 
 A [LESS](http://lesscss.org/) plugin for [Metalsmith](http://www.metalsmith.io/).
 
@@ -43,3 +47,14 @@ $ npm test
 ## License
 
 MIT License, see [LICENSE](https://github.com/christophercliff/metalsmith-less/blob/master/LICENSE.md) for details.
+
+[npm-badge]: https://img.shields.io/npm/v/metalsmith-less.svg
+[npm-url]: https://npmjs.com/package/metalsmith-less
+[travis-badge]: https://travis-ci.org/christophercliff/metalsmith-less.svg?branch=master
+[travis-url]: https://travis-ci.org/christophercliff/metalsmith-less
+[coveralls-badge]:https://coveralls.io/repos/christophercliff/metalsmith-less/badge.svg?branch=master&service=github
+[coveralls-url]: https://coveralls.io/github/christophercliff/metalsmith-less?branch=master
+[david-badge]: https://david-dm.org/christophercliff/metalsmith-less.svg
+[david-url]: https://david-dm.org/christophercliff/metalsmith-less
+[slack-badge]: https://img.shields.io/badge/Slack-Join%20Chat%20→-blue.svg
+[slack-url]: http://metalsmith-slack.herokuapp.com/
