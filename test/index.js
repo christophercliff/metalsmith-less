@@ -53,4 +53,26 @@ describe('the plugin', function () {
 
     })
 
+    it('preserves source files by default', function (done) {
+        (new Metalsmith('test/fixtures/preserve-source'))
+            .use(less())
+            .build(function (err) {
+                if (err) return done(err)
+                assertDir('test/fixtures/preserve-source/expected', 'test/fixtures/preserve-source/build')
+                return done(null)
+            })
+    })
+
+    it('removes source files', function (done) {
+        (new Metalsmith('test/fixtures/remove-source'))
+            .use(less({
+                removeSource: true,
+            }))
+            .build(function (err) {
+                if (err) return done(err)
+                assertDir('test/fixtures/remove-source/expected', 'test/fixtures/remove-source/build')
+                return done(null)
+            })
+    })
+
 })
