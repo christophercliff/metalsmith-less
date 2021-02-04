@@ -26,6 +26,10 @@ new Metalsmith(__dirname)
 
     The [pattern](https://github.com/sindresorhus/multimatch) to filter source files. Default `**/*.less`.
 
+- **`removeSource`** `Boolean`
+
+    When `true`, the source files are removed and will not appear in the `build/` directory.  The default is `false`, which will keep a copy of your `*.less` files around.
+
 - **`render`** `Object`
 
     The options passed to [`less.render(String[, Object])`](http://lesscss.org/usage/#programmatic-usage). Unfortunately, this method is *undocumented*. See https://github.com/less/less-docs/issues/212 for more information. Default `undefined`.
